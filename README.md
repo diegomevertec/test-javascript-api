@@ -5,8 +5,8 @@ ATH Móvil's Javascript integration provides a simple, secure and fast checkout 
 
 ## Prerequisites
 You should have the link of athmovil_base.js for you can add in your ecommerce platform with a tag <script></script>. Also, you should have your public token, for example:
-public token: a66ce73d04f2087615f6320b724defc5b4eedc55
 ```javascript
+public token: a66ce73d04f2087615f6320b724defc5b4eedc55
 <script src="js/athmovil_base.js"></script>
 ```
 
@@ -82,5 +82,19 @@ The correct implementation of div and scripts, should show the payment button li
 After clicking you consume the first service "/payment", this service could response a success or an error status.
 
 If you receive a success status, also you get a ecommerceId and auth_token into data response property and open a modal that show you a message for waiting.
+
+```javascript
+{
+    "status": "success",
+    "data": {
+        "ecommerceId": "ad42df37-f989-11ed-8935-cd14e3558bc7",
+        "auth_token": "eyJraWQiOiJNeUtVRXZvb2NSMWptbnZocHZXVEI0WmZvcU1wbEx6TWF5VzdjUWd1ck5FIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI0MjdmOTZiMTExMmYyZGZlNTk4NjM0YWVkNmYyOTA4NmJmNWU5OTdlYjYyYTVjMDJlOTI0YTdmNTIzZDI3ZDliMzI2OGE1N2RmYWQ4ZWE3NGY1M2JhNWQzMjMyNTRkYTEiLCJmaUlkIjoiIiwibmJmIjoxNjg0ODYwNTIzLCJhenAiOltdLCJwZXJtaXNzaW9ucyI6WyJjdXN0b21lci5idXNpbmVzcy5lY29tbWVyY2UuYXV0aG9yaXphdGlvbjp3cml0ZSJdLCJpc3MiOiJQcm9jZXNzIFBheW1lbnQiLCJzY29wZXMiOlsiY3VzdG9tZXIuYnVzaW5lc3MuZWNvbW1lcmNlLmF1dGhvcml6YXRpb246d3JpdGUiXSwiZXhwIjoxNjg0ODYxNDIzLCJpYXQiOjE2ODQ4NjA1MjN9.HFPQncPDvIIqU4DeORiirntetxoU-KaRLWBK_bIAqJdR2cOWyhTTjVhVtbnCMN6qjsWB3knhp9N0aaVXPOi9DhYoWRlGVWLhSByp4K7c1fJwKFLhJoasQCew8SlXwQlalbYHt1F5s1hQgGmStGATIwnXRrE-4doBKpNedQn9CKo3qX08QGk78eAPnejzJKMlYOr__kFDR1c-L7P2btOvlx5vYDXhqmq_gljqp8f5a28pBFVh6DMx12IUu_FiQrI4ofinjiij3CWfXOVcqzBbE0UJudlS43Jb7JlZPflDrD6TM3PR4a8_KtM89Solm-r4__aIw02Gqf5ROsan_YT7FA"
+    }
+}
+```
+
+Immediately should open the phoneNumberATHM.html screen, here you have enter your phone number for update the transaction, this screen consume “/updatePhoneNumber” service and you should close phoneNumberATHM.html and open the waitingPaymentATHM.html screen and receive a push notification on your ATHMovil app too.
+
+From your ATHMovil app you could confirm the transaction and later confirm it and consume the ”authorization” service automatically and should close waitingPaymentATHM.html  and show you a success message on main screen where you have a payment button.
 
 ### HTML
