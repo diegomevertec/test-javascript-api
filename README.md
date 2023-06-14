@@ -77,7 +77,7 @@ Finally, you should add in your body html a <div></div> tag with value "ATHMovil
 ## Usage
 The correct implementation of div and scripts, should show the payment button like this example:
 
-![alt text](https://image.ibb.co/e7883o/Default.png)
+![boton](boton.png)
  
 After clicking you consume the first service "/payment", this service could response a success or an error status.
 
