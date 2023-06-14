@@ -92,9 +92,16 @@ If you receive a success status, also you get a ecommerceId and auth_token into 
     }
 }
 ```
+![screen_uno](screen_uno.png)
 
 Immediately should open the phoneNumberATHM.html screen, here you have enter your phone number for update the transaction, this screen consume “/updatePhoneNumber” service and you should close phoneNumberATHM.html and open the waitingPaymentATHM.html screen and receive a push notification on your ATHMovil app too.
 
+![screen_dos](screen_dos.png)
+
+![screen_tres](screen_tres.png)
+
 From your ATHMovil app you could confirm the transaction and later confirm it and consume the ”authorization” service automatically and should close waitingPaymentATHM.html  and show you a success message on main screen where you have a payment button.
+
+![screen_cuatro](screen_cuatro.png)
 
 ### HTML
