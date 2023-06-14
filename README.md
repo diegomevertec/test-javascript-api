@@ -106,7 +106,7 @@ From your ATHMovil app you could confirm the transaction and later confirm it an
 
 ## Callback functions
 
-authorizationATHM. This function should return a JSON object with the details of the transaction.
+`authorizationATHM`. This function should return a JSON object with the details of the transaction.
 
 ```javascript
 {
@@ -146,7 +146,7 @@ authorizationATHM. This function should return a JSON object with the details of
 }
 ```
 
-cancelATHM. This function consumes “/findPayment” service and should return a JSON object with the details of the transaction.
+`cancelATHM`. This function consumes “/findPayment” service and should return a JSON object with the details of the transaction.
 
 ```javascript
 {
@@ -186,7 +186,7 @@ cancelATHM. This function consumes “/findPayment” service and should return 
 }
 ```
 
-expiredATHM. This function consumes “/findPayment” service and should return a JSON object with the details of the transaction. 
+`expiredATHM`. This function consumes “/findPayment” service and should return a JSON object with the details of the transaction. 
 
 ```javascript
 {
