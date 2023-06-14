@@ -104,4 +104,124 @@ From your ATHMovil app you could confirm the transaction and later confirm it an
 
 ![screen_cuatro](screen_cuatro.png)
 
-### HTML
+## Callback functions
+
+authorizationATHM. This function should return a JSON object with the details of the transaction.
+
+```javascript
+{
+    "status": "success",
+    "data": {
+        "ecommerceStatus": "COMPLETED",
+        "ecommerceId": "870633c9-f994-11ed-8935-c155d7fc6afe",
+        "referenceNumber": "215070440-8a36d420882a293a018849cae9f500a8",
+        "businessCustomerId": "402894d56e713892016e7f2963de0010",
+        "transactionDate": "2023-05-23 14:06:54",
+        "dailyTransactionId": "0001",
+        "businessName": "Tdameritrade",
+        "businessPath": "Tdameritrade",
+        "industry": "COMPUTERS",
+        "subTotal": 1.33,
+        "tax": 1.00,
+        "total": 2.33,
+        "fee": 0.06,
+        "netAmount": 2.28,
+        "totalRefundedAmount": 0,
+        "metadata1": "Metadata 1",
+        "metadata2": "Metada 2",
+        "items": [
+            {
+                "name": "Diego MO",
+                "description": "Diego",
+                "quantity": 1,
+                "price": 1.33,
+                "tax": 1,
+                "metadata": "Bitcoin es lo mejor",
+                "formattedPrice": "",
+                "sku": ""
+            }
+        ],
+        "isNonProfit": false
+    }
+}
+```
+
+cancelATHM. This function consumes “/findPayment” service and should return a JSON object with the details of the transaction.
+
+```javascript
+{
+    "status": "success",
+    "data": {
+        "ecommerceStatus": "CANCEL",
+        "ecommerceId": "a5f8143a-f997-11ed-8935-a9b922a1efbc",
+        "referenceNumber": "",
+        "businessCustomerId": "402894d56e713892016e7f2963de0010",
+        "transactionDate": "",
+        "dailyTransactionId": "",
+        "businessName": "Tdameritrade",
+        "businessPath": "Tdameritrade",
+        "industry": "COMPUTERS",
+        "subTotal": 1.33,
+        "tax": 1.00,
+        "total": 2.33,
+        "fee": 0.00,
+        "netAmount": 0,
+        "totalRefundedAmount": 0,
+        "metadata1": "Metadata 1",
+        "metadata2": "Metada 2",
+        "items": [
+            {
+                "name": "Diego MO",
+                "description": "Diego",
+                "quantity": 1,
+                "price": 1.33,
+                "tax": 1,
+                "metadata": "Bitcoin es lo mejor",
+                "formattedPrice": "",
+                "sku": ""
+            }
+        ],
+        "isNonProfit": false
+    }
+}
+```
+
+expiredATHM. This function consumes “/findPayment” service and should return a JSON object with the details of the transaction. 
+
+```javascript
+{
+    "status": "success",
+    "data": {
+        "ecommerceStatus": "CANCEL",
+        "ecommerceId": "a5f8143a-f997-11ed-8935-a9b922a1efbc",
+        "referenceNumber": "",
+        "businessCustomerId": "402894d56e713892016e7f2963de0010",
+        "transactionDate": "",
+        "dailyTransactionId": "",
+        "businessName": "Tdameritrade",
+        "businessPath": "Tdameritrade",
+        "industry": "COMPUTERS",
+        "subTotal": 1.33,
+        "tax": 1.00,
+        "total": 2.33,
+        "fee": 0.00,
+        "netAmount": 0,
+        "totalRefundedAmount": 0,
+        "metadata1": "Metadata 1",
+        "metadata2": "Metada 2",
+        "items": [
+            {
+                "name": "Diego MO",
+                "description": "Diego",
+                "quantity": 1,
+                "price": 1.33,
+                "tax": 1,
+                "metadata": "Bitcoin es lo mejor",
+                "formattedPrice": "",
+                "sku": ""
+            }
+        ],
+        "isNonProfit": false
+    }
+}
+```
