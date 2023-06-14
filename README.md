@@ -225,3 +225,33 @@ expiredATHM. This function consumes “/findPayment” service and should return
     }
 }
 ```
+
+## Errors
+
+If you close phonePaymentATHM.html or waitingPaymentATHM.html screen you should see next error message on the main payment button screen.
+
+![error_uno](error_uno.png)
+
+If you want to make another payment from other website or mobile app using ATHM's payment button (from same customer to same business), you should see next error message on the main payment button screen.
+
+![error_dos](error_dos.png)
+
+When you press ATHM's payment button and the don´t exist any problem, this transaction is created with an expiration time (timeout property in ATHM_Checkout object).
+
+After you receive a success response with ecommerceId and auth_token, should open next screen (phonePaymentATHM.html) and you should add your phoneNumber for you confirm the transaction from ATHM personal app.
+
+If you are late to make the confirm from your ATHM personal app, you should see next error message on the main payment button screen.
+
+![error_tres](error_tres.png)
+
+## Testing
+
+
+
+## User experience
+
+![user_experience](user_experience.png)
+
+## Legal
+
+The use of this API and any related documentation is governed by and must be used in accordance with the Terms and Conditions of Use of ATH Móvi Business ®, which may be found at: https://athmovilbusiness.com/terminos.
