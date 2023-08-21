@@ -7,7 +7,7 @@ ATH Móvil's Javascript integration provides a simple, secure and fast checkout 
 You should have the link of athmovil_base.js for you can add in your ecommerce platform with a tag <script></script>. Also, you should have your public token, for example:
 ```javascript
 public token: a66ce73d04f2087615f6320b724defc5b4eedc55
-<script src="js/athmovil_base.js"></script>
+<script src="https://payments.athmovil.com/api/js/athmovil_base.js"></script>
 ```
 
 ## Support
@@ -18,7 +18,7 @@ From your ecommerce platform you should identify whose page show the payment but
 The next step is add in your tag <body></body> two scripts using <script></scrip> tag. 
 The first script should have with the link of athmovil_base.js in src property, for example:  
 ```javascript
-<script src="js/athmovil_base.js"></script>
+<script src="https://payments.athmovil.com/api/js/athmovil_base.js"></script>
 ```
 The second script should have an JSON object called "ATHM_Checkout" where you should put your public token as value for the property publicToken from ATHM_Checkout object.
 Also, this second script should have three callback functions:
@@ -32,10 +32,10 @@ Finally, you should add in your body html a <div></div> tag with value "ATHMovil
 ```html
 <body>
 <div id="ATHMovil_Checkout_Button_payment"></div>
-<script src="js/athmovil_base.js"></script>
+<script src="https://payments.athmovil.com/api/js/athmovil_base.js"></script>
 <script type="text/javascript">
           const ATHM_Checkout = {
-              env: 'dev',
+              env: 'production',
               publicToken: 'a66ce73d04f2087615f6320b724defc5b4eedc55',
               timeout: 600,
               orderType: '',
